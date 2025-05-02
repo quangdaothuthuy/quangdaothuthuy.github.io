@@ -1,0 +1,68 @@
+img {
+    width: 100%; height: 100%; object-fit: cover;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    background-color: #89360C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 300px; /* Tổng chiều rộng */
+    height: 300px; /* Tổng chiều cao */
+    background-color: #ccc;
+}
+
+.cell {
+    border: 0px solid #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.text-cell {
+    box-sizing: border-box;
+    padding: 18px;
+}
+
+.spinning-element {
+    animation:  step-spin 4s steps(4) infinite, rotate 2s steps(1) infinite; /* Áp dụng animation tên là "spin" trong 2 giây, chuyển động đều đặn và lặp lại vô hạn */
+  }
+  
+  @keyframes step-spin {
+    from {
+      background-position: 0 0; /* Bắt đầu ở frame đầu tiên */
+    }
+    to {
+      background-position: -400px 0; /* Di chuyển tới frame cuối cùng */
+    }
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg); /* Bắt đầu từ 0 độ */
+    }
+    25% {
+      transform: rotate(90deg); /* Xoay 90 độ */
+    }
+    50% {
+      transform: rotate(180deg); /* Xoay 180 độ */
+    }
+    75% {
+      transform: rotate(270deg); /* Xoay 270 độ */
+    }
+    100% {
+      transform: rotate(360deg); /* Xoay 360 độ */
+    }
+  }

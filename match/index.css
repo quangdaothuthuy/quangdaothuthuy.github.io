@@ -1,0 +1,96 @@
+img {
+    width: 100%; height: 100%; object-fit: cover;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+}
+
+.b {
+    width: 35%;
+    height: auto;
+    padding: 8px;
+}
+
+/* .b1 {
+    position: absolute;
+    top: 32px;
+    left: 32px;
+} */
+
+.b2 {
+    position: absolute;
+    right: 32px;
+    bottom: 32px;
+}
+
+.corner-l {
+    position: absolute;
+    left: 24px;
+    bottom: 24px;
+}
+
+.corner-r {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+}
+
+.top {
+    position: absolute;
+    top: 32px;
+    width: 100%;
+    height: auto;
+    left: 32px;
+    display: flex;
+    align-items: center;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 32px;
+    width: 100%;
+    height: auto;
+    right: 32px;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.desc {
+    width: 30%;
+    height: auto;
+}
+
+.match {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height:100%;
+    padding: 16px;
+    box-sizing: border-box
+}
+
+.row {
+    display: flex;
+    flex-direction: 'column';
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box
+}
+
+.boom {
+    flex-grow: 1;
+}
+
+.boom-image {
+    object-fit: contain;
+    width: 60%;
+    box-sizing: border-box
+}

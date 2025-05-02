@@ -1,0 +1,234 @@
+/* Đảm bảo body chiếm toàn bộ màn hình */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Slider container */
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Chiếm toàn bộ chiều cao màn hình */
+  overflow: hidden;
+}
+
+/* Slider item (each iframe) */
+.slider {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Các iframe chiếm toàn bộ không gian của slider */
+.slider-item {
+  flex: 1 0 100%; /* Mỗi iframe chiếm 100% chiều rộng */
+  height: 100vh; /* Chiếm toàn bộ chiều cao màn hình */
+  border: none;
+}
+
+.section {
+  position: relative;
+  width: 100%;/* Chiếm toàn bộ chiều cao màn hình */
+  overflow: hidden;
+  border: none;
+  height: 530px;
+}
+
+.slogan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.landing-page {
+  margin-top: 16px;
+  object-fit: cover;
+  width: 100% ;
+}
+
+.landing-page-image {
+  width: 100% ;
+}
+
+.full-screen-section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border: none;
+}
+
+.contact-container {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #C7BDFC;
+  padding-top: 32px;
+}
+
+.contact-container .row {
+  display: flex;
+  flex-direction: 'column';
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.contact-container .qr {
+  width: 220px;
+  height: auto;
+  box-sizing: border-box;
+}
+
+.contact-container .star {
+  width: 26px;
+  box-sizing: border-box;
+}
+
+.contact-container .qr-text {
+  width: 120px;
+  box-sizing: border-box;
+}
+
+.contact-container .desc {
+  width: 300px;
+  box-sizing: border-box;
+}
+
+.contact-container .cl-end {
+  display: flex;
+  flex-direction: 'row';
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  gap: 8px;
+  margin-top: 16px;
+  padding-bottom: 32px;
+}
+
+.contact-container .cl-end .icon {
+  width: 35;
+}
+
+
+.square-container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow: hidden;
+  background-color: #89360C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 300px; /* Tổng chiều rộng */
+  height: 300px; /* Tổng chiều cao */
+  background-color: #ccc;
+}
+
+.cell {
+  border: 0px solid #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.cell img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.text-cell {
+  box-sizing: border-box;
+  padding: 18px;
+}
+
+.spinning-element {
+  animation:  step-spin 4s steps(4) infinite, rotate 2s steps(1) infinite; /* Áp dụng animation tên là "spin" trong 2 giây, chuyển động đều đặn và lặp lại vô hạn */
+}
+
+@keyframes step-spin {
+  from {
+    background-position: 0 0; /* Bắt đầu ở frame đầu tiên */
+  }
+  to {
+    background-position: -400px 0; /* Di chuyển tới frame cuối cùng */
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg); /* Bắt đầu từ 0 độ */
+  }
+  25% {
+    transform: rotate(90deg); /* Xoay 90 độ */
+  }
+  50% {
+    transform: rotate(180deg); /* Xoay 180 độ */
+  }
+  75% {
+    transform: rotate(270deg); /* Xoay 270 độ */
+  }
+  100% {
+    transform: rotate(360deg); /* Xoay 360 độ */
+  }
+}
+
+.delay-1{
+  opacity: 0;
+  animation: blinkA 5s linear infinite;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+
+.delay-2{
+  opacity: 0;
+  animation: blinkB 5s linear infinite;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+}
+
+.delay-3{
+  opacity: 0;
+  animation: blinkC 5s linear infinite;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
+}
+
+@keyframes blinkA {
+  0%, 80% { opacity: 1; }   /* 4s = 80% của 5s */
+  80.01%, 100% { opacity: 0; } /* 1s tắt */
+}
+
+/* Keyframe cho phần tử B */
+@keyframes blinkB {
+  0%, 60% { opacity: 1; }   /* 3s = 60% của 5s */
+  60.01%, 100% { opacity: 0; }
+}
+
+/* Keyframe cho phần tử C */
+@keyframes blinkC {
+  0%, 40% { opacity: 1; }   /* 2s = 66.66% của 5s */
+  41%, 100% { opacity: 0; }
+}
