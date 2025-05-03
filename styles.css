@@ -1,6 +1,6 @@
 /* Đảm bảo body chiếm toàn bộ màn hình */
 body, html {
-  margin: 0;
+  margin: auto;
   padding: 0;
   height: 100%;
   font-family: 'Poppins', sans-serif;
@@ -120,23 +120,21 @@ body, html {
 
 .square-container {
   margin: 0;
-  padding: 0;
+  padding: 64px;
   width: 100%;
   overflow: hidden;
   background-color: #89360C;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  box-sizing: border-box;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  width: 300px; /* Tổng chiều rộng */
-  height: 300px; /* Tổng chiều cao */
+   /* Tổng chiều cao */
   background-color: #ccc;
 }
 
